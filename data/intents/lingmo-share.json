@@ -1,0 +1,44 @@
+{
+  "format": "lingmo-intents",
+  "version": 1,
+  "app": "lingmo-share",
+  "name": {"en": "Phone and devices", "pt_BR": "Celular e dispositivos"},
+  "icon": "lingmo-share",
+  "desktop": "lingmo-share.desktop",
+  "dbus": {"service": "com.lingmo.Share", "path": "/Intents"},
+  "intents": [
+    {
+      "id": "share.send",
+      "title": {"en": "Send to a nearby device", "pt_BR": "Enviar para um dispositivo próximo"},
+      "description": {"en": "Sends files or a text to a phone or computer nearby (LocalSend or KDE Connect).",
+                      "pt_BR": "Envia arquivos ou um texto para um celular ou computador próximo (LocalSend ou KDE Connect)."},
+      "summary": {"en": "Send to {device}", "pt_BR": "Enviar para {device}"},
+      "icon": "document-send",
+      "capabilities": ["send"],
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "device": {"type": "string", "minLength": 1, "maxLength": 200, "title": {"en": "Device (name or id)", "pt_BR": "Dispositivo (nome ou id)"}},
+          "files": {"type": "array", "items": {"type": "string", "format": "file"}, "maxItems": 100, "default": [],
+                    "title": {"en": "Files", "pt_BR": "Arquivos"}},
+          "text": {"type": "string", "maxLength": 100000, "default": "", "x-multiline": true, "title": {"en": "Text", "pt_BR": "Texto"}},
+          "wait": {"type": "boolean", "default": true, "title": {"en": "Wait until it arrives", "pt_BR": "Esperar chegar"}}
+        },
+        "required": ["device"]
+      },
+      "result": {
+        "type": "object",
+        "properties": {
+          "transferId": {"type": "string", "title": {"en": "Transfer", "pt_BR": "Transferência"}},
+          "device": {"type": "string", "title": {"en": "Device", "pt_BR": "Dispositivo"}},
+          "state": {"type": "string", "title": {"en": "State", "pt_BR": "Estado"}},
+          "progress": {"type": "number", "title": {"en": "Progress", "pt_BR": "Progresso"}}
+        }
+      },
+      "examples": {
+        "pt_BR": ["enviar para {device}", "mandar arquivo para {device}", "enviar texto para {device}"],
+        "en": ["send to {device}", "share with {device}"]
+      }
+    }
+  ]
+}

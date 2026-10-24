@@ -30,6 +30,10 @@
 #include <csignal>
 #include <cstdio>
 
+#ifdef HAVE_LINGMO_INTENTS
+#include "shareintents.h"
+#endif
+
 static volatile std::sig_atomic_t s_interrupted = 0;
 
 static const QString s_service = QStringLiteral("com.lingmo.Share");
@@ -258,6 +262,9 @@ int main(int argc, char *argv[])
         return 0;
     }
     daemon.start();
+#ifdef HAVE_LINGMO_INTENTS
+    publishShareIntents(&daemon);
+#endif
     if (!parser.isSet(daemonOpt))
         QTimer::singleShot(0, &daemon, [&daemon, &parser, &pageOpt] { daemon.showWindow(parser.value(pageOpt)); });
     return app.exec();

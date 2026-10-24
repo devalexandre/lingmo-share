@@ -13,3 +13,4 @@ Categories=Network;FileTransfer;Utility;
 Keywords=phone;android;iphone;ipad;share;send;airdrop;localsend;kdeconnect;sms;
 Keywords[pt_BR]=celular;telefone;android;iphone;ipad;compartilhar;enviar;airdrop;localsend;kdeconnect;sms;mensagens;
 StartupNotify=true
+X-Lingmo-Intents=share.send;

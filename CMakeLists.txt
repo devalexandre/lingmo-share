@@ -55,6 +55,17 @@ target_link_libraries(lingmo-share PRIVATE
 )
 target_compile_definitions(lingmo-share PRIVATE LINGMO_SHARE_VERSION="${PROJECT_VERSION}")
 
+# Lingmo Intents: share.send on com.lingmo.Share /Intents
+find_package(LingmoIntents 1.0 QUIET)
+if(LingmoIntents_FOUND)
+    target_sources(lingmo-share PRIVATE src/daemon/shareintents.cpp src/daemon/shareintents.h)
+    target_compile_definitions(lingmo-share PRIVATE HAVE_LINGMO_INTENTS)
+    target_link_libraries(lingmo-share PRIVATE LingmoIntents::LingmoIntents)
+    lingmo_install_intents(MANIFEST data/intents/lingmo-share.json)
+else()
+    message(WARNING "LingmoIntents not found: lingmo-share is built without app actions (intents)")
+endif()
+
 foreach(f SettingsPage PhoneGuide QrCard)
     set_source_files_properties(qml/module/${f}.qml PROPERTIES QT_RESOURCE_ALIAS ${f}.qml)
 endforeach()

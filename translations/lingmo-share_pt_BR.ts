@@ -741,6 +741,26 @@
         <source>Phone and devices</source>
         <translation>Celular e dispositivos</translation>
     </message>
+    <message>
+        <source>Send either files or a text.</source>
+        <translation>Envie arquivos ou um texto (um dos dois).</translation>
+    </message>
+    <message>
+        <source>Device not found: %1. Nearby: %2</source>
+        <translation>Dispositivo não encontrado: %1. Por perto: %2</translation>
+    </message>
+    <message>
+        <source>none</source>
+        <translation>nenhum</translation>
+    </message>
+    <message>
+        <source>The device can&apos;t receive now.</source>
+        <translation>O dispositivo não pode receber agora.</translation>
+    </message>
+    <message>
+        <source>The transfer did not complete (%1).</source>
+        <translation>A transferência não terminou (%1).</translation>
+    </message>
 </context>
 <context>
     <name>SettingsPage</name>
