@@ -1,0 +1,32 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qml/DeviceBubble.qml</file>
+        <file>qml/DevicesPage.qml</file>
+        <file>qml/DeviceTile.qml</file>
+        <file>qml/DropEdge.qml</file>
+        <file>qml/FlyIn.qml</file>
+        <file>qml/GuideHost.qml</file>
+        <file>qml/IncomingDialog.qml</file>
+        <file>qml/Main.qml</file>
+        <file>qml/ModuleMissing.qml</file>
+        <file>qml/OverlayWindow.qml</file>
+        <file>qml/PairRequest.qml</file>
+        <file>qml/PhonePage.qml</file>
+        <file>qml/Picker.qml</file>
+        <file>qml/PinDialog.qml</file>
+        <file>qml/ScrollablePage.qml</file>
+        <file>qml/SettingsHost.qml</file>
+        <file>qml/SmsView.qml</file>
+        <file>qml/TransfersPage.qml</file>
+        <file>images/computer.svg</file>
+        <file>images/guide.svg</file>
+        <file>images/laptop.svg</file>
+        <file>images/lingmo-share.svg</file>
+        <file>images/phone.svg</file>
+        <file>images/send.svg</file>
+        <file>images/settings.svg</file>
+        <file>images/tablet.svg</file>
+        <file>images/transfers.svg</file>
+        <file>images/web.svg</file>
+    </qresource>
+</RCC>

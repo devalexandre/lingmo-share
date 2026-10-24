@@ -1,0 +1,15 @@
+[Desktop Entry]
+Type=Application
+Name=Phone and devices
+Name[pt_BR]=Celular e dispositivos
+GenericName=Phone and file sharing
+GenericName[pt_BR]=Celular e compartilhamento
+Comment=Connect Android phones and send files to iPhone, iPad, Mac, Windows and nearby devices
+Comment[pt_BR]=Conecte celulares Android e envie arquivos para iPhone, iPad, Mac, Windows e dispositivos próximos
+Exec=lingmo-share
+Icon=lingmo-share
+Terminal=false
+Categories=Network;FileTransfer;Utility;
+Keywords=phone;android;iphone;ipad;share;send;airdrop;localsend;kdeconnect;sms;
+Keywords[pt_BR]=celular;telefone;android;iphone;ipad;compartilhar;enviar;airdrop;localsend;kdeconnect;sms;mensagens;
+StartupNotify=true

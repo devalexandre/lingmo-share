@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Phone and devices
+Name[pt_BR]=Celular e dispositivos
+Exec=lingmo-share --daemon
+Icon=lingmo-share
+NoDisplay=true
+OnlyShowIn=Lingmo;
+X-KDE-autostart-phase=2
